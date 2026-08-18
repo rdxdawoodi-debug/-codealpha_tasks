@@ -1,0 +1,12 @@
+# E-Commerce Data Analysis
+# Python dependencies
+
+# Data Analysis
+pandas
+
+# Data Visualization
+matplotlib
+seaborn
+
+# Excel File Support
+openpyxl
