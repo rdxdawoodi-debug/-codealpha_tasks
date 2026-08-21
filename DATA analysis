@@ -1,0 +1,136 @@
+# Arabica Coffee Certification: Exploratory Data Analysis
+
+## Project Overview
+
+This project performs an Exploratory Data Analysis (EDA) of Arabica coffee certification records. The analysis explores coffee origin, growing altitude, processing methods, harvest and grading periods, bag quantities, and regional patterns.
+
+The goal is to transform raw coffee certification data into clear, meaningful insights using data cleaning, analysis, and visualization.
+
+## Business Objective
+
+To understand the distribution and characteristics of Arabica coffee certification records across countries, regions, altitude ranges, processing methods, bag quantities, and grading years.
+
+## Dataset
+
+The dataset contains Arabica coffee certification records.
+
+Each row represents one coffee certification record.
+
+### Main Variables
+
+- `coffee_id` — Unique coffee record identifier
+- `Country of Origin` — Country where the coffee originated
+- `Farm Name` — Name of the coffee farm
+- `Region` — Coffee-growing region
+- `Altitude` — Growing altitude in metres
+- `Number of Bags` — Number of coffee bags in the record
+- `Bag Weight` — Weight of a coffee bag
+- `Harvest Year` — Coffee harvest period
+- `Grading Date` — Date of certification/grading
+- `Variety` — Coffee variety
+- `Processing Method` — Method used to process coffee beans
+
+## Questions Asked Before EDA
+
+1. Which countries have the highest number of coffee certification records?
+2. What coffee-growing altitude range is most common?
+3. Which processing methods are used most frequently?
+4. How do certification records vary across grading years?
+5. Which countries have the highest coffee bag quantities?
+6. Which regions and coffee varieties appear most often?
+7. What patterns can be found in coffee origin, altitude, processing, and time?
+
+## Data Cleaning
+
+The following data-cleaning steps were performed:
+
+- Checked for duplicate records and duplicate coffee IDs.
+- Removed incomplete blank rows.
+- Converted invalid altitude values, such as zero, into blank values.
+- Converted invalid bag quantities, such as zero, into blank values.
+- Standardized region names using consistent capitalization.
+- Standardized processing-method labels.
+- Extracted a clean starting year from the Harvest Year column.
+- Converted bag-weight values from kilograms and pounds into kilograms.
+- Created a data-quality flag to identify records ready for analysis.
+
+## Exploratory Data Analysis
+
+The analysis includes:
+
+- Country-wise distribution of coffee certification records
+- Altitude distribution of coffee farms
+- Processing-method distribution
+- Grading-year trend analysis
+- Bag quantity analysis
+- Data-quality and missing-value assessment
+
+## Key Findings
+
+- Colombia has the highest number of certification records in the current cleaned dataset.
+- Mexico, Guatemala, and Brazil are also major contributors to the dataset.
+- The median known coffee-growing altitude is approximately 1,400 metres.
+- Most coffee records are from farms located between 1,001 and 1,500 metres.
+- Washed/Wet is the most frequently recorded processing method.
+- Natural/Dry is the second most common processing method.
+- Certification records vary across grading years.
+- Coffee records are concentrated in a group of major coffee-producing countries.
+
+## Visualizations
+
+The project includes the following visualizations:
+
+- Top 10 countries by coffee certification records
+- Distribution of coffee-growing altitude
+- Processing-method distribution
+- Coffee certification records by grading year
+- Data-quality summary
+- Cleaned coffee data dashboard
+
+## Tools and Technologies
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Microsoft Excel
+- Jupyter Notebook
+
+## Project Structure
+
+```text
+arabica-coffee-eda/
+│
+├── data/
+│   ├── raw/
+│   └── cleaned/
+│
+├── notebooks/
+│   └── 01_coffee_eda.ipynb
+│
+├── outputs/
+│   ├── Coffee_EDA_Cleaned.xlsx
+│   └── charts/
+│
+├── README.md
+└── requirements.txt
+```
+
+## Recommendations
+
+- Use one standard unit, such as kilograms, for bag weight.
+- Use a consistent date format for harvest-year values.
+- Maintain standardized region and processing-method names.
+- Improve data collection for altitude, variety, and processing method.
+- Add sensory quality variables such as aroma, flavor, acidity, defects, and total cup points for future coffee-quality analysis.
+
+## Limitation
+
+This dataset supports analysis of coffee certification, origin, altitude, processing methods, bag quantities, and certification patterns.
+
+It does not include sensory-quality variables such as aroma, flavor, acidity, defects, or total cup points. Therefore, this project does not rank coffee quality.
+
+## Conclusion
+
+This project demonstrates an end-to-end EDA workflow using Arabica coffee certification data. It shows how raw records can be cleaned, explored, and transformed into useful insights about coffee origin, altitude, processing practices, and certification trends.
